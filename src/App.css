@@ -55,3 +55,102 @@
     color: white;
     font: size 16px; ;
 }
+
+.crud-container {
+    max-width: 600px; /* Ancho máximo del contenedor del CRUD */
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde alrededor del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+}
+
+h1 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto */
+}
+
+.input-field {
+    background-color: #eeeeee; /* Fondo de los campos de entrada */
+    border: 1px solid #ccc; /* Borde de los campos de entrada */
+    border-radius: 5px; /* Bordes redondeados */
+    width: calc(100% - 10px); /* Ajustar el ancho para el espaciado */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.input-field:focus {
+    outline: none; /* Sin contorno en foco */
+    border-color: cornflowerblue; /* Color del borde al enfocar */
+    box-shadow: 0 0 5px cornflowerblue; /* Sombra al enfocar */
+}
+
+.btn-add-update {
+    background-color: #28a745; /* Color verde para agregar/actualizar */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    width: 100%; /* Botón ocupa el 100% del ancho */
+}
+
+.btn-add-update:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+.product-list {
+    list-style-type: none; /* Sin viñetas en la lista */
+    padding: 0; /* Sin espaciado interno */
+}
+
+.product-item {
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid #ccc; /* Línea de separación entre productos */
+}
+
+.product-item:last-child {
+    border-bottom: none; /* Sin línea en el último elemento */
+}
+
+.product-item button {
+    background-color: #007bff; /* Color azul para editar */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.product-item button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Color rojo para eliminar */
+    margin-left: 10px; /* Espacio entre botones */
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsive design para pantallas pequeñas */
+@media (max-width: 768px) {
+    .crud-container {
+        padding: 15px; /* Menos espaciado en pantallas pequeñas */
+    }
+
+    .input-field {
+        padding: 8px; /* Menos espaciado interno en campos */
+    }
+
+    .btn-add-update {
+        padding: 8px; /* Menos espaciado interno en botones */
+    }
+}

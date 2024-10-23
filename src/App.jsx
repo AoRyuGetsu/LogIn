@@ -1,35 +1,34 @@
-import { useState } from 'react'
+// App.jsx
+import { useState, useEffect } from 'react';
+import appFirebase from './credenciales'; // Ajusta la ruta si es necesario
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import Login from './components/Login'; // Asegúrate de que la ruta sea correcta
+import Home from './components/Home'; // Asegúrate de que la ruta sea correcta
+import './App.css';
 
-//importando los modulos de firebase
-import appFirebase from '../src/credenciales'
-import { getAuth,onAuthStateChanged } from 'firebase/auth'
-const auth = getAuth (appFirebase)
-
-//importar nuestros componentes
-import Login from '../src/components/Login'
-import Home from '../src/components/Home';
-
-import './App.css'
+const auth = getAuth(appFirebase);
 
 function App() {
- 
-  const [ usuario, setUsuario] = useState(null)
+  const [usuario, setUsuario] = useState(null);
 
-  onAuthStateChanged(auth,(usuarioFirebase)=>{
-    if(usuarioFirebase) {
-      setUsuario(usuarioFirebase)
-    }
-    else
-    {
-      setUsuario(null)
-    }
-  })
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      if (usuarioFirebase) {
+        setUsuario(usuarioFirebase);
+      } else {
+        setUsuario(null);
+      }
+    });
+
+    // Limpieza de la suscripción
+    return () => unsubscribe();
+  }, [auth]); // Agrega `auth` como dependencia
 
   return (
     <div>
-      { usuario ? <Home correoUsuario = {usuario.email}/> : <Login/>}
+      {usuario ? <Home correoUsuario={usuario.email} /> : <Login />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
