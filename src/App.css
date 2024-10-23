@@ -1,61 +1,135 @@
-.padre{
+/* src/components/WelcomePage.css */
+
+/* Estilos de la página de bienvenida */
+.welcome-page {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-image: url('../assets/fondo.jpg'); /* Cambia esto por la ruta de tu imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Coloca elementos en columna */
+    justify-content: space-between; /* Espacia elementos en la página */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex; /* Usa flexbox para la barra de navegación */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinea verticalmente */
+    padding: 20px; /* Espaciado */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+}
+
+.navbar-logo h1 {
+    margin: 0; /* Sin margen */
+    font-size: 24px; /* Tamaño del logo */
+}
+
+/* Estilos del botón de inicio de sesión */
+.navbar-links .btn-login {
+    background-color: #0D6EFD; /* Color del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.navbar-links .btn-login:hover {
+    background-color: #084298; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos del contenido de bienvenida */
+.welcome-content {
+    text-align: center; /* Alineación centrada del texto */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado */
+}
+
+.welcome-title {
+    font-size: 48px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.welcome-text {
+    font-size: 24px; /* Tamaño del texto */
+    margin-bottom: 40px; /* Espacio inferior */
+}
+
+/* Estilos del botón explorar (opcional) */
+.btn-explorar {
+    background-color: #28a745; /* Color verde */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia cursor al pasar */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn-explorar:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos adicionales que ya tenías */
+.padre {
     display: flex;
     align-items: center;
     height: 100%;
 }
-.tamaño-imagen{
+.tamaño-imagen {
     width: 100%;
     height: 800px;
     margin-top: 100px;
 }
-.estilo-profile{
+.estilo-profile {
     border-radius: 50%;
-    height :120px;
+    height: 120px;
     width: 120px;
-    margin : 0 auto;
+    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.cajatexto
-{
-    background-color:#cccccc4e;
+.cajatexto {
+    background-color: #cccccc4e;
     border-color: slategray;
-    border-radius:30px;
+    border-radius: 30px;
     width: 100%;
     padding: 15px;
-    border-width :0px;
+    border-width: 0px;
     margin-bottom: 20px;
 }
-.cajatexto:focus{
+.cajatexto:focus {
     outline: 1px solid cornflowerblue;
     box-shadow: 0 0 10px cornflowerblue;
 }
-.btnform{
-    background-color: #0D6EFD;;
+.btnform {
+    background-color: #0D6EFD;
     border-color: slategray;
-    border-radius:30px;
+    border-radius: 30px;
     width: 100%;
     padding: 15px;
-    border-width :0px;
+    border-width: 0px;
     margin-bottom: 20px;
     color: white;
 }
-.texto{
-   font-size: 20px ; 
-   color: slategray;
-   font-family: Arial, Helvetica, sans-serif;
-   margin-top: 5px;
-
+.texto {
+    font-size: 20px; 
+    color: slategray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
 }
-.btnswitch{
+.btnswitch {
     background-color: darkblue;
     border-radius: 30px;
     padding: 8px;
     border-width: 0px;
     color: white;
-    font: size 16px; ;
+    font-size: 16px; 
 }
-
 .crud-container {
     max-width: 600px; /* Ancho máximo del contenedor del CRUD */
     margin: 20px auto; /* Centrar el contenedor */
@@ -65,12 +139,10 @@
     background-color: #f9f9f9; /* Color de fondo claro */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
 }
-
 h1 {
     text-align: center; /* Centrar el título */
     color: #333; /* Color del texto */
 }
-
 .input-field {
     background-color: #eeeeee; /* Fondo de los campos de entrada */
     border: 1px solid #ccc; /* Borde de los campos de entrada */
@@ -79,13 +151,11 @@ h1 {
     padding: 10px; /* Espaciado interno */
     margin-bottom: 15px; /* Espaciado inferior */
 }
-
 .input-field:focus {
     outline: none; /* Sin contorno en foco */
     border-color: cornflowerblue; /* Color del borde al enfocar */
     box-shadow: 0 0 5px cornflowerblue; /* Sombra al enfocar */
 }
-
 .btn-add-update {
     background-color: #28a745; /* Color verde para agregar/actualizar */
     color: white; /* Texto blanco */
@@ -96,27 +166,22 @@ h1 {
     transition: background-color 0.3s; /* Transición suave para el fondo */
     width: 100%; /* Botón ocupa el 100% del ancho */
 }
-
 .btn-add-update:hover {
     background-color: #218838; /* Color más oscuro al pasar el mouse */
 }
-
 .product-list {
     list-style-type: none; /* Sin viñetas en la lista */
     padding: 0; /* Sin espaciado interno */
 }
-
 .product-item {
     display: flex; /* Usar flexbox para alinear elementos */
     justify-content: space-between; /* Espacio entre los elementos */
     padding: 10px; /* Espaciado interno */
     border-bottom: 1px solid #ccc; /* Línea de separación entre productos */
 }
-
 .product-item:last-child {
     border-bottom: none; /* Sin línea en el último elemento */
 }
-
 .product-item button {
     background-color: #007bff; /* Color azul para editar */
     color: white; /* Texto blanco */
@@ -126,16 +191,13 @@ h1 {
     cursor: pointer; /* Cambiar cursor al pasar por encima */
     transition: background-color 0.3s; /* Transición suave para el fondo */
 }
-
 .product-item button:hover {
     background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
-
 .delete-button {
     background-color: #dc3545; /* Color rojo para eliminar */
     margin-left: 10px; /* Espacio entre botones */
 }
-
 .delete-button:hover {
     background-color: #c82333; /* Color más oscuro al pasar el mouse */
 }
@@ -145,11 +207,9 @@ h1 {
     .crud-container {
         padding: 15px; /* Menos espaciado en pantallas pequeñas */
     }
-
     .input-field {
         padding: 8px; /* Menos espaciado interno en campos */
     }
-
     .btn-add-update {
         padding: 8px; /* Menos espaciado interno en botones */
     }
